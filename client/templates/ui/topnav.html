@@ -1,0 +1,29 @@
+<template name="topnav">
+
+	<div class="topnav">
+		<ul class="list-inline mgb15">
+			<li>
+				<h1>
+					<a href="{{pathFor 'home'}}">爱建政协工委网络平台</a>
+				</h1>
+			</li>
+			<li>
+				<a href="">约谈委员</a>
+			</li>
+			<li>
+				<a href="">委员提案</a>
+			</li>
+			<li>
+				<a href="">市民留言</a>
+			</li>
+			<li>
+				<a href="">成果展示</a>
+			</li>
+		</ul>
+		<div class="topinfo">
+			<span id="currentDatetime">您好，今天是{{moment 'YYYY年M月D日、dddd、A HH:mm:ss'}} </span>
+			<span id="currentWeather">天气读取中。。。</span>
+		</div>
+	</div>
+
+</template>
