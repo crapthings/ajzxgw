@@ -10,3 +10,5 @@ collection-hooks
 coffeescript
 stylus
 bootstrap-3
+accounts-password
+iron-router-progress

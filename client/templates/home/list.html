@@ -1,0 +1,18 @@
+<template name="noticesList">
+
+	<ul>
+		{{#each notices}}
+			{{> noticesItem}}
+		{{/each}}
+	</ul>
+
+</template>
+
+<template name="noticesItem">
+
+	<li>
+		<h5 class="nmg">{{moment createdAt 'YYYY.MM.DD'}}：{{title}}</h5>
+		<p>{{content}}</p>
+	</li>
+
+</template>

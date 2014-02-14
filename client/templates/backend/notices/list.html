@@ -1,0 +1,30 @@
+<template name="backend-notices-list">
+
+	<table class="table">
+		<thead>
+			<tr>
+				<th>标题</th>
+				<th>创建日期</th>
+				<th>管理</th>
+			</tr>
+		</thead>
+		<tbody>
+			{{#each notices}}
+				{{> backend-notices-item}}
+			{{/each}}
+		</tbody>
+	</table>
+
+</template>
+
+<template name="backend-notices-item">
+
+	<tr>
+		<td>{{title}}</td>
+		<td>{{moment createdAt 'YYYY.MM.DD'}}</td>
+		<td>
+			<a href="javascript:;" class="remove">删除</a>
+		</td>
+	</tr>
+
+</template>

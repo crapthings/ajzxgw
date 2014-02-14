@@ -1,6 +1,12 @@
 Router.configure
 	layoutTemplate: 'layout'
 
+Router.before ->
+	unless Meteor.userId()
+		Router.go Router.routes['backend-signin'].path()
+		@stop()
+, except: ['home', 'messages', 'backend-signin']
+
 Meteor.startup ->
 
 	moment.lang('zh-cn')

@@ -1,0 +1,15 @@
+<template name="noticeForm">
+
+	<form action="javascript:;" id="noticeForm">
+		<div class="form-group">
+			<input type="text" name="title" class="form-control" placeholder="标题" autofocus>
+		</div>
+		<div class="form-group">
+			<textarea name="content" class="form-control" rows="3" placeholder="内容"></textarea>
+		</div>
+		<div class="form-group">
+			{{> btn-submit}}
+		</div>
+	</form>
+
+</template>

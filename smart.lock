@@ -5,7 +5,7 @@
       "bootstrap-3": {},
       "iron-router": {},
       "collection-hooks": {},
-      "semantic-ui": {}
+      "iron-router-progress": {}
     },
     "packages": {
       "bootstrap-3": {
@@ -23,10 +23,10 @@
         "tag": "v0.6.2",
         "commit": "29484b2110206be93b01c6d11ce06ec9208de7bd"
       },
-      "semantic-ui": {
-        "git": "https://github.com/nooitaf/meteor-semantic-ui.git",
-        "tag": "v0.12.4",
-        "commit": "a9dec18066d80e575e57189e005782436ad1d87f"
+      "iron-router-progress": {
+        "git": "https://github.com/Multiply/iron-router-progress.git",
+        "tag": "v0.2.0",
+        "commit": "ce730d1d26feadb7c75ea25f22c5bfdb0c549a8b"
       }
     }
   }

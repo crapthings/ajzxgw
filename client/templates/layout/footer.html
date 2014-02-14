@@ -2,8 +2,13 @@
 
 	<div class="footer text-right">
 		<ul class="list-inline">
+			{{#if currentUser}}
+				<li>
+					<a href="javascript: Meteor.logout();">退出</a>
+				</li>
+			{{/if}}
 			<li>
-				<a href="">管理员入口</a>
+				<a href="{{pathFor 'backend'}}}">管理员入口</a>
 			</li>
 		</ul>
 		<p class="text-sm">本系统建议使用HTML5浏览器</p>

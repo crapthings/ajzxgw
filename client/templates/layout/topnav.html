@@ -8,20 +8,20 @@
 				</h1>
 			</li>
 			<li>
-				<a href="">约谈委员</a>
+				<a class="hexagon" href="">约谈委员</a>
 			</li>
 			<li>
-				<a href="">委员提案</a>
+				<a class="hexagon" href="">委员提案</a>
 			</li>
 			<li>
-				<a href="">市民留言</a>
+				<a class="hexagon" href="{{pathFor 'messages'}}">市民留言</a>
 			</li>
 			<li>
-				<a href="">成果展示</a>
+				<a class="hexagon" href="">成果展示</a>
 			</li>
 		</ul>
 		<div class="topinfo">
-			<span id="currentDatetime">您好，今天是{{moment 'YYYY年M月D日、dddd、A HH:mm:ss'}} </span>
+			<span id="currentDatetime">您好，今天是{{moment currentMoment 'YYYY年M月D日、dddd、A HH:mm:ss'}} </span>
 			<span id="currentWeather">天气读取中。。。</span>
 		</div>
 	</div>

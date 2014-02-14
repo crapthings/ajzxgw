@@ -3,6 +3,6 @@
     "bootstrap-3": {},
     "iron-router": {},
     "collection-hooks": {},
-    "semantic-ui": {}
+    "iron-router-progress": {}
   }
 }
