@@ -1,0 +1,19 @@
+<template name="myTalksList">
+
+	<ul class="list-unstyled">
+		{{#each myTalksList}}
+			{{> myTalksItem}}
+		{{/each}}
+	</ul>
+
+</template>
+
+<template name="myTalksItem">
+
+	<li>
+		<div>
+			<p>{{content}}</p>
+		</div>
+	</li>
+
+</template>

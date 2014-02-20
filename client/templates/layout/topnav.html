@@ -1,23 +1,29 @@
 <template name="topnav">
 
 	<div class="topnav">
+		<h2 style="margin-bottom: 15px;">
+			<a href="{{pathFor 'home'}}">爱建街道政协工委网络议政平台</a>
+		</h2>
 		<ul class="list-inline mgb15">
 			<li>
-				<h1>
-					<a href="{{pathFor 'home'}}">爱建政协工委网络平台</a>
-				</h1>
+				<a href="{{pathFor 'talks'}}">
+					<img src="/01.png" width="140" alt="">
+				</a>
 			</li>
 			<li>
-				<a class="hexagon" href="">约谈委员</a>
+				<a href="">
+					<img src="/02.png" width="140" alt="">
+				</a>
 			</li>
 			<li>
-				<a class="hexagon" href="">委员提案</a>
+				<a href="{{pathFor 'messages'}}">
+					<img src="/03.png" width="140" alt="">
+				</a>
 			</li>
 			<li>
-				<a class="hexagon" href="{{pathFor 'messages'}}">市民留言</a>
-			</li>
-			<li>
-				<a class="hexagon" href="">成果展示</a>
+				<a href="{{pathFor 'achievements'}}">
+					<img src="/04.png" width="140" alt="">
+				</a>
 			</li>
 		</ul>
 		<div class="topinfo">

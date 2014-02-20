@@ -8,3 +8,6 @@ Helper 'currentMoment', ->
 
 Helper 'moment', (date, pattern) ->
 	return moment(date).format(pattern)
+
+Helper 'isRole', (user, role) ->
+	return true if user.role is role

@@ -1,11 +1,14 @@
 <template name="backend-layout">
 
-	<div class="fit-background" style="height: 240px; background-image: url('/headerbg.jpg');"></div>
-	<div class="container">
-		{{> topnav}}
-		{{> backend-nav}}
-		{{yield}}
-		{{> footer}}
-	</div>
+	{{#if isRole currentUser 'administrator'}}
+		<div class="wrapper">
+			<div class="container transparent-bg">
+				{{> topnav}}
+				{{> backend-nav}}
+				{{yield}}
+				{{> footer}}
+			</div>
+		</div>
+	{{/if}}
 
 </template>
