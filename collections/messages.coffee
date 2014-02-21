@@ -2,7 +2,7 @@
 
 Messages.before.insert (userId, message) ->
 	_.extend message,
-		response: false
+		answered: false
 		createdAt: new Date()
 		timestamp: Date.now()
 

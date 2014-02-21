@@ -10,9 +10,29 @@
 
 <template name="myTalksItem">
 
-	<li>
-		<div>
-			<p>{{content}}</p>
+	<li class="mgb30">
+		<div class="alert {{checkResponse}}">
+			{{#if answer}}
+				<p class="well well-sm">{{answer}}</p>
+			{{/if}}
+			<p class="nmg">{{content}}</p>
+			<div class="clearfix">
+				<ul class="list-inline pull-right">
+					<li>
+						<a href="javascript:;" class="remove">删除</a>
+					</li>
+				</ul>
+				<ul class="list-inline">
+					<li>
+						<a href="javascript:;">发布于 {{moment createdAt 'YYYY.MM.DD'}}</a>
+					</li>
+					{{#if answeredAt}}
+						<li>
+							<a href="javascript:;">回复于 {{moment answeredAt 'YYYY.MM.DD'}}</a>
+						</li>
+					{{/if}}
+				</ul>
+			</div>
 		</div>
 	</li>
 

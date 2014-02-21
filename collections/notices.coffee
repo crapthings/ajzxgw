@@ -21,3 +21,6 @@ if Meteor.isServer
 			sort:
 				timestamp: -1
 			limit: 20
+
+	Meteor.publish 'notice', (noticeId) ->
+		Notices.find { _id: noticeId }

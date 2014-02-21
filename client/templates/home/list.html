@@ -11,8 +11,10 @@
 <template name="noticesItem">
 
 	<li>
-		<h5 class="nmg">{{moment createdAt 'YYYY.MM.DD'}}：{{title}}</h5>
-		<p>{{content}}</p>
+		<h5 class="nmg">
+			<a href="{{pathFor 'viewNotice'}}" target="_blank">{{moment createdAt 'YYYY.MM.DD'}}：{{title}}</a>
+		</h5>
+		<p>{{truncate content 120}}</p>
 	</li>
 
 </template>
