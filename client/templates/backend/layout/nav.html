@@ -1,6 +1,6 @@
 <template name="backend-nav">
 
-	<ul class="nav nav-tabs mgb15">
+	<ul class="backend-nav nav nav-tabs mgb15">
 		<li class="{{activeFor 'backend'}}">
 			<a href="{{pathFor 'backend'}}">首页</a>
 		</li>
@@ -9,6 +9,15 @@
 		</li>
 		<li class="{{activeFor 'backend-talks-unanswered'}}">
 			<a href="{{pathFor 'backend-talks-unanswered'}}">未答复约谈</a>
+		</li>
+		<li class="{{activeFor 'backend-suggestions-uncompleted'}}">
+			<a href="{{pathFor 'backend-suggestions-uncompleted'}}">未完结提案</a>
+		</li>
+		<li class="{{activeFor 'backend-messages-unanswered'}}">
+			<a href="{{pathFor 'backend-messages-unanswered'}}">未答复留言</a>
+		</li>
+		<li class="{{activeFor 'backend-archievements'}}">
+			<a href="{{pathFor 'backend-archievements'}}">成果展示</a>
 		</li>
 	</ul>
 

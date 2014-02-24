@@ -1,0 +1,35 @@
+<template name="backendSuggestionsList">
+
+	<h3>未完结提案</h3>
+	<ul class="list-unstyled">
+		{{#each uncompletedSuggestionsList}}
+			{{> backendSuggestionItem}}
+		{{/each}}
+	</ul>
+
+</template>
+
+<template name="backendSuggestionItem">
+
+	<li class="mgb15">
+		<div>
+			<h5 class="mgb10">
+				<a href="">{{title}}</a>
+			</h5>
+			<div class="mgb10">
+				<p class="nmg">{{truncate content 180}}</p>
+			</div>
+			<div class="clearfix">
+				<ul class="list-inline pull-right">
+					<li>
+						<a href="javascript:;" class="btn btn-success btn-xs complete">完结</a>
+					</li>
+					<li>
+						<a href="javascript:;" class="btn btn-danger btn-xs remove">删除</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</li>
+
+</template>

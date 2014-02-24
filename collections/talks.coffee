@@ -2,6 +2,13 @@
 
 Talks.before.insert (userId) -> return false unless userId
 
+Talks.before.update (userId, talk) ->
+	return false if userId isnt talk.creatorId and Meteor.user().role isnt 'administrator'
+
+Talks.before.remove (userId, talk) ->
+	return false if userId isnt talk.creatorId and Meteor.user().role isnt 'administrator'
+	return false if talk.answered is true
+
 Talks.before.insert (userId, talk) ->
 	_.extend talk,
 		answered: false

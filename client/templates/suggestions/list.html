@@ -1,0 +1,49 @@
+<template name="suggestionsList">
+
+	<h3>当前可参与的提案</h3>
+	<ul class="list-unstyled">
+		{{#each uncompletedSuggestionsList}}
+			{{> suggestionItem}}
+		{{/each}}
+	</ul>
+
+</template>
+
+<template name="suggestionItem">
+
+	<li class="mgb30">
+		<div>
+			<h5 class="mgb10">
+				<a href="{{pathFor 'viewSuggestion'}}">{{title}}</a>
+			</h5>
+			<div class="mgb10">{{truncate content 180}}</div>
+			<div class="clearfix">
+				<ul class="list-inline">
+					<li>
+						<a href="{{pathFor 'viewSuggestion'}}" class="btn btn-success btn-xs">提交意见</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</li>
+
+</template>
+
+<template name="commentsList">
+
+	<h3>提案意见</h3>
+	<ul class="list-unstyled">
+		{{#each comments}}
+			{{> commentItem}}
+		{{/each}}
+	</ul>
+
+</template>
+
+<template name="commentItem">
+
+	<li class="mgb30">
+		<p>{{content}}</p>
+	</li>
+
+</template>

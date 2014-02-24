@@ -20,3 +20,7 @@ Helper 'checkResponse', ->
 
 Helper 'truncate', (content, length) ->
 	return content.truncate length
+
+Helper 'canRemove', ->
+	if @creatorId? and @creatorId is Meteor.userId() or Meteor.user().role is 'administrator'
+		return true

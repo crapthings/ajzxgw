@@ -1,5 +1,6 @@
 <template name="myTalksList">
 
+	<h3>我的谈话内容</h3>
 	<ul class="list-unstyled">
 		{{#each myTalksList}}
 			{{> myTalksItem}}
@@ -10,27 +11,27 @@
 
 <template name="myTalksItem">
 
-	<li class="mgb30">
+	<li class="mgb15">
 		<div class="alert {{checkResponse}}">
 			{{#if answer}}
-				<p class="well well-sm">{{answer}}</p>
+				<div class="well well-sm nmg">
+					<p class="nmg">{{answer}}</p>
+					<small>回复于 {{moment answeredAt 'YYYY.MM.DD'}}</small>
+				</div>
 			{{/if}}
 			<p class="nmg">{{content}}</p>
 			<div class="clearfix">
 				<ul class="list-inline pull-right">
-					<li>
-						<a href="javascript:;" class="remove">删除</a>
-					</li>
+					{{#unless answer}}
+						<li>
+							<a href="javascript:;" class="btn btn-danger btn-xs remove">删除</a>
+						</li>
+					{{/unless}}
 				</ul>
 				<ul class="list-inline">
 					<li>
-						<a href="javascript:;">发布于 {{moment createdAt 'YYYY.MM.DD'}}</a>
+						<small>发布于 {{moment createdAt 'YYYY.MM.DD'}}</small>
 					</li>
-					{{#if answeredAt}}
-						<li>
-							<a href="javascript:;">回复于 {{moment answeredAt 'YYYY.MM.DD'}}</a>
-						</li>
-					{{/if}}
 				</ul>
 			</div>
 		</div>

@@ -5,7 +5,7 @@ Router.before ->
 	unless Meteor.userId()
 		Router.go Router.routes['backend-signin'].path()
 		@stop()
-, except: ['home', 'talks', 'messages', 'achievements', 'sign', 'backend-signin']
+, except: ['home', 'talks', 'suggestions', 'messages', 'achievements', 'sign', 'backend-signin', 'viewNotice', 'viewSuggestion']
 
 Meteor.startup ->
 

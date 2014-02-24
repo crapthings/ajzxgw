@@ -1,8 +1,10 @@
 <template name="viewNotice">
 
-	{{#with notice}}
-		<h3>{{title}}</h3>
-		<div>{{#markdown}}{{content}}{{/markdown}}</div>
-	{{/with}}
+	<div class="mgb30">
+		{{#with notice}}
+			<h3>{{title}}</h3>
+			<div class="text-indent">{{#markdown}}{{content}}{{/markdown}}</div>
+		{{/with}}
+	</div>
 
 </template>

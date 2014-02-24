@@ -7,9 +7,9 @@ Router.map ->
 					timestamp: -1
 		before: [
 			->
-				@subscribe('myTalksList').wait()
-			->
 				unless Meteor.userId()
 					Router.go Router.routes['sign'].path()
 					@stop()
+			->
+				@subscribe('myTalksList').wait()
 		]

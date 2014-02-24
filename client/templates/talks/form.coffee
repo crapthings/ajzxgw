@@ -5,3 +5,4 @@ Template.fastTalkForm.events
 		Meteor.call 'newTalk', options, (err) ->
 			unless err
 				($ tmpl.find '.reset').trigger 'click'
+				($ 'textarea').height 'auto'

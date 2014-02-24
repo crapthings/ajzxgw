@@ -1,7 +1,7 @@
 <template name="messagesList">
 
 	<h4>市民留言</h4>
-	<ul class="list-unstyled pdtb30">
+	<ul class="list-unstyled">
 		{{#each messages}}
 			{{> messagesItem}}
 		{{/each}}
@@ -11,28 +11,47 @@
 
 <template name="messagesItem">
 
-	<li class="mgb15 pdtb15 clearfix" style="border-bottom: 1px solid #efefef;">
-		<ul class="list-inline nmg pull-right">
-			{{#if response}}
-				<li>
-					<span class="label label-success">已答复</span>
-				</li>
-			{{else}}
-				<li>
-					<span class="label label-danger">未答复</span>
-				</li>
+	<li class="mgb15 clearfix">
+		<div class="alert {{checkResponse}} nmg">
+			{{#if answer}}
+				<div class="well well-sm mgb10">
+					<p class="nmg">{{answer}}</p>
+					<small>回复于 {{moment answeredAt 'YYYY.MM.DD'}}</small>
+				</div>
 			{{/if}}
-			<li>
-				<span class="label label-default">{{moment createdAt 'YYYY.MM.DD'}}</span>
-			</li>
-			<li>
-				<span class="label label-default">{{name}}</span>
-			</li>
-		</ul>
-		<h5 class="mgb10">
-			<a href="">{{title}}</a>
-		</h5>
-		<p class="text-indent">{{content}}</p>
+			<ul class="list-inline nmg pull-right">
+				{{#if response}}
+					<li>
+						<span class="label label-success">已答复</span>
+					</li>
+				{{else}}
+					<li>
+						<span class="label label-danger">未答复</span>
+					</li>
+				{{/if}}
+				<li>
+					<span class="label label-info">市民 {{realname}}</span>
+				</li>
+				<li>
+					<span class="label label-default">发布于 {{moment createdAt 'YYYY.MM.DD'}}</span>
+				</li>
+			</ul>
+			<div class="mgb10">{{title}}</div>
+			<div class="mgb10">
+				<p class="text-indent">{{content}}</p>
+			</div>
+			<div class="clearfix">
+				<ul class="list-inline pull-right">
+					{{#if currentUser}}
+						{{#if canRemove}}
+							<li>
+								<a href="javascript:;" class="btn btn-danger btn-xs remove">删除</a>
+							</li>
+						{{/if}}
+					{{/if}}
+				</ul>
+			</div>
+		</div>
 	</li>
 
 </template>
