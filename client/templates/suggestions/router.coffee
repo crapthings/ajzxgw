@@ -5,7 +5,7 @@ Router.map ->
 			uncompletedSuggestionsList: Suggestions.find { completed: false },
 				sort:
 					timestamp: -1
-		before: [
+		onBeforeAction: [
 			->
 				@subscribe('uncompletedSuggestionsList').wait()
 		]
@@ -17,7 +17,7 @@ Router.map ->
 			comments: Comments.find { suggestionId: @params._id },
 				sort:
 					timestamp: -1
-		before: [
+		onBeforeAction: [
 			->
 				unless Meteor.userId()
 					Router.go Router.routes['sign'].path()

@@ -6,3 +6,6 @@ Template.fastTalkForm.events
 			unless err
 				($ tmpl.find '.reset').trigger 'click'
 				($ 'textarea').height 'auto'
+
+Template.fastTalkForm.rendered = ->
+	($ 'textarea').autosize()

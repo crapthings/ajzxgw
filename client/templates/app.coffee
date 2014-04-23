@@ -1,9 +1,9 @@
 Router.configure
 	layoutTemplate: 'layout'
 
-Router.before ->
+Router.onBeforeAction ->
 	unless Meteor.userId()
-		Router.go Router.routes['backend-signin'].path()
+		Router.go Router.routes['backendSignin'].path()
 		@stop()
 , except: ['home', 'talks', 'suggestions', 'messages', 'achievements', 'sign', 'backend-signin', 'viewNotice', 'viewSuggestion']
 

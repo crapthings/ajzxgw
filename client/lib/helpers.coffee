@@ -10,7 +10,7 @@ Helper 'moment', (date, pattern) ->
 	return moment(date).format(pattern)
 
 Helper 'isRole', (user, role) ->
-	return true if user.role is role
+	return true if user? and user.role is role
 
 Helper 'checkResponse', ->
 	if @answered is true

@@ -1,4 +1,4 @@
-<template name="backend-notices-list">
+<template name="backendNoticesList">
 
 	<table class="table">
 		<thead>
@@ -10,14 +10,14 @@
 		</thead>
 		<tbody>
 			{{#each notices}}
-				{{> backend-notices-item}}
+				{{> backendNoticesItem}}
 			{{/each}}
 		</tbody>
 	</table>
 
 </template>
 
-<template name="backend-notices-item">
+<template name="backendNoticesItem">
 
 	<tr>
 		<td>{{title}}</td>

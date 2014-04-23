@@ -4,4 +4,6 @@ Template.signup.events
 		options = form2js 'signupForm'
 		Accounts.createUser options, (err) ->
 			unless err
-				Router.go Router.routes['talks'].path()
+				Router.go 'talks'
+			else
+				alert '注册失败。'

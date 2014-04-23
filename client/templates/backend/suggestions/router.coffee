@@ -1,5 +1,5 @@
 Router.map ->
-	@route 'backend-suggestions-uncompleted',
+	@route 'backendSuggestionsUncompleted',
 		layoutTemplate: 'backend-layout'
 		path: '/backend/suggestions/uncompleted'
 		data: ->
@@ -7,7 +7,7 @@ Router.map ->
 				sort:
 					timestamp: -1
 				limit: 100
-		before: [
+		onBeforeAction: [
 			->
 				@subscribe('uncompletedSuggestionsList').wait()
 		]

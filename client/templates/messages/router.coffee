@@ -6,7 +6,7 @@ Router.map ->
 				sort:
 					timestamp: -1
 				limit: 50
-		before: [
+		onBeforeAction: [
 			->
 				@subscribe('latestPublicMessage').wait()
 		]

@@ -1,3 +1,3 @@
 Router.map ->
-	@route 'backend-signin',
+	@route 'backendSignin',
 		path: '/backend/signin'

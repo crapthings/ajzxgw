@@ -5,10 +5,10 @@ Router.map ->
 			myTalksList: Talks.find { creatorId: Meteor.userId() },
 				sort:
 					timestamp: -1
-		before: [
+		onBeforeAction: [
 			->
 				unless Meteor.userId()
-					Router.go Router.routes['sign'].path()
+					Router.go 'sign'
 					@stop()
 			->
 				@subscribe('myTalksList').wait()

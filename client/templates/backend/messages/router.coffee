@@ -1,12 +1,12 @@
 Router.map ->
-	@route 'backend-messages-unanswered',
+	@route 'backendMessagesUnanswered',
 		layoutTemplate: 'backend-layout'
 		path: '/backend/messages/unanswered'
 		data: ->
 			unansweredMessagesList: Messages.find { answered: false },
 				sort:
 					timestamp: -1
-		before: [
+		onBeforeAction: [
 			->
 				@subscribe('unansweredMessagesList').wait()
 		]

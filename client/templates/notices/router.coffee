@@ -3,7 +3,7 @@ Router.map ->
 		path: '/notices/:_id'
 		data: ->
 			notice: Notices.findOne { _id: @params._id }
-		before: [
+		onBeforeAction: [
 			->
 				@subscribe('notice').wait()
 		]

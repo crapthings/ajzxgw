@@ -1,4 +1,4 @@
 Router.map ->
-	@route 'backend-archievements',
+	@route 'backendArchievements',
 		layoutTemplate: 'backend-layout'
 		path: '/backend/archievements'

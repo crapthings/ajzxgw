@@ -1,4 +1,4 @@
-Template['btn-submit'].events
+Template['btnSubmit'].events
 	'click': (e, t) ->
 		e.preventDefault()
 		helper = ($ '[data-helper]').data()

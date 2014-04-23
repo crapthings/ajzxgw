@@ -1,5 +1,5 @@
 Router.map ->
-	@route 'backend-notices',
+	@route 'backendNotices',
 		layoutTemplate: 'backend-layout'
 		path: '/backend/notices'
 		data: ->
@@ -7,6 +7,6 @@ Router.map ->
 				sort:
 					timestamp: -1
 
-	@route 'backend-notices-new',
+	@route 'backendNoticesNew',
 		layoutTemplate: 'backend-layout'
 		path: '/backend/notices/new'
