@@ -1,5 +1,11 @@
 <template name="achievements">
 
-
+	<ul>
+		{{#each achievements}}
+			<li>
+				<img src="http://1.58.67.62:8081/uploads/{{images.[0]}}" alt="" width="200">
+			</li>
+		{{/each}}
+	</ul>
 
 </template>

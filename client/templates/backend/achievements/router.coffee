@@ -1,4 +1,12 @@
 Router.map ->
-	@route 'backendArchievements',
+	@route 'backendAchievements',
 		layoutTemplate: 'backend-layout'
-		path: '/backend/archievements'
+		path: '/backend/achievements'
+		data: ->
+			achievements: Achievements.find {},
+				sort:
+					createdAt: -1
+		onBeforeAction: [
+			->
+				@subscribe('achievements').wait()
+		]

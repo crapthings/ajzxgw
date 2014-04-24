@@ -1,0 +1,15 @@
+<template name="backendAchievements">
+
+	{{> achievementForm}}
+
+	{{#each achievements}}
+		<div>
+			<h4>{{title}}</h4>
+			<p>{{content}}</p>
+			{{#each images}}
+				<img src="http://1.58.67.62:8081/uploads/{{this}}" alt="" height="150">
+			{{/each}}
+		</div>
+	{{/each}}
+
+</template>
